@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { TextField, Button, Container, Typography, Grid, Input, Box } from "@mui/material";
 import { product } from "../../Redux/cartSlice";
@@ -9,7 +9,7 @@ import { product } from "../../Redux/cartSlice";
 import backgroundImage from '../../utils/pr3.jpg'; // Adjust the path as necessary
 
 function AddProduct() {
-  // const { redirectHome } = useSelector((state) => state.CrudKey);
+
   const { register, handleSubmit, formState: { errors } } = useForm();
   const navigate = useNavigate();
   const dispatch = useDispatch();

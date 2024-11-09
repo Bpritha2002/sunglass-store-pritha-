@@ -36,7 +36,7 @@ const theme = createTheme({
 });
 
 function Login() {
-  const { redirectHome } = useSelector((state) => state.contents);
+  const {  } = useSelector((state) => state.contents);
   const {
     register,
     handleSubmit,

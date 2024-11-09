@@ -79,11 +79,12 @@ const Categories = () => {
 
   const handleShowMore = () => {
     setVisibleCount(prevCount => prevCount + 6);
-  };
-
-  const getBatchNumber = () => {
     return Math.ceil(visibleCount / 6);
   };
+
+  // const getBatchNumber = () => {
+  //   return Math.ceil(visibleCount / 6);
+  // };
 
   return (
     <div className="category-container">
