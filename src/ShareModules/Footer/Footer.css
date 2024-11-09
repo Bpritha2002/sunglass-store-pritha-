@@ -1,0 +1,150 @@
+.footer {
+  background: linear-gradient(to right, #f7f7f7, #e0e0e0); /* Softer off-white to light gray gradient */
+  color: #444; /* Slightly lighter gray for the text */
+  padding: 3rem 0; /* Increased padding for more spacious feel */
+  border-top: 3px solid #d4d4d4; /* Thicker border for a stronger visual divide */
+  box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.1); /* Softer and larger shadow for depth */
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.footer-content {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footer-title {
+  font-size: 2.7rem;
+  margin-bottom: 1.7rem;
+  color: #333; /* Darker gray for the title */
+  letter-spacing: 1px; /* Slightly increased letter spacing for elegance */
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow for emphasis */
+  position: relative;
+}
+
+.footer-title:before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 3px;
+   /* Peachy underline */
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.footer-description {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #555; /* Medium gray text color */
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto 1.5rem auto;
+}
+
+.footer-contact {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: #555; /* Medium gray text color */
+}
+
+.footer-section {
+  margin-bottom: 3rem; /* Increased margin for spacing between sections */
+}
+
+.newsletter-input {
+  padding: 0.7rem 1.2rem;
+  border: 1px solid #cccccc;
+  border-radius: 5px; /* Rounded edges for a softer look */
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  color: #333;
+  width: 250px; /* Fixed width for a more structured design */
+}
+
+.newsletter-button {
+  background-color: #ff7f50; /* Peachy color for the button */
+  color: #fff;
+  border: none;
+  padding: 0.7rem 2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+}
+
+.newsletter-button:hover {
+  background-color: #ff6347; /* Darker peachy color on hover */
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+
+.social-media {
+  margin-bottom: 3rem;
+}
+
+.social-icon {
+  margin: 0 1rem;
+  color: #444; /* Slightly lighter icon color */
+  font-size: 1.6rem; /* Slightly larger icons */
+  transition: color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+}
+
+.social-icon:hover {
+  color: #ff7f50; /* Peachy color on hover */
+  transform: scale(1.1); /* Slightly enlarge icon on hover */
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.footer-link {
+  margin: 0 1.2rem;
+  color: #777; /* Lighter gray before hover */
+  text-transform: uppercase;
+  font-size: 1rem;
+  transition: color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+  position: relative;
+}
+
+.footer-link:hover {
+  color: #ff7f50; /* Peachy color on hover */
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+
+.footer-link:before {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #ff7f50; /* Peachy underline */
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.footer-link:hover:before {
+  width: 80%; /* Expand underline on hover */
+}
+
+/* Additional styling for better visual appeal */
+.footer-underline {
+  border-bottom: 3px solid #ff7f50; /* Peachy underline */
+  width: 70px;
+  margin: 0 auto 2rem auto;
+}
+
+.footer-description, .footer-contact {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-content p {
+  margin: 0;
+}

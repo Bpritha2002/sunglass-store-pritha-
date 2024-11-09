@@ -1,0 +1,431 @@
+.about-container {
+  padding: 60px 20px;
+  border-radius: 15px;
+  max-width: 1200px;
+  margin: auto;
+  font-family: 'Times New Roman', Times, serif;
+  transition: transform 0.3s ease;
+}
+
+.about-title {
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #333;
+  position: relative;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 60px;
+  align-items: center;
+}
+
+.about-story-title {
+  font-size: 2em;
+  color: #444;
+  margin-bottom: 20px;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 3px solid #ff6347;
+  padding-bottom: 10px;
+}
+
+.about-story-text {
+  line-height: 1.8;
+  color: #666;
+  font-size: 1.2em;
+  letter-spacing: 0.5px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-image-container {
+  text-align: center;
+}
+
+.about-image {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  filter: grayscale(30%);
+}
+
+.about-image:hover {
+  transform: scale(1.1) rotate(-2deg);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3);
+  filter: grayscale(0%);
+}
+
+.about-mission, .about-values {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.about-mission-title, .about-values-title {
+  font-size: 2em;
+  color: #444;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  border-bottom: 3px solid #ff6347;
+  padding-bottom: 10px;
+}
+
+.about-mission-text, .about-values-text {
+  line-height: 1.8;
+  color: #666;
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-button {
+  background: linear-gradient(135deg, #ffaa00, #c54313);
+  color: white;
+  padding: 15px 35px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.4s ease, transform 0.3s ease;
+}
+
+.about-button:hover {
+  background: linear-gradient(135deg, #5cff47, #27926b);
+  transform: scale(1.1);
+}
+
+.about-values-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.about-values-list li {
+  padding: 15px 25px;
+  border-radius: 50px;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-values-list li:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.team-grid {
+  display: flex;
+  gap: 40px;
+  justify-content: space-around;
+  margin-bottom: 80px;
+}
+
+.team-member {
+  text-align: center;
+  max-width: 300px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+.team-image {
+  width: 100%;
+  border-radius: 10%;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.team-image:hover {
+  transform: scale(1.1);
+}
+
+.team-name {
+  font-weight: bold;
+  margin-top: 20px;
+  color: #222;
+  font-size: 1.4em;
+}
+
+.team-role {
+  color: #777;
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+.about-testimonials {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.about-testimonials-title {
+  font-size: 2em;
+  color: #444;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.testimonial {
+  margin-top: 40px;
+  position: relative;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-image {
+  width: 200px;
+  height: 150px;
+  border-radius: 10%;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-image:hover {
+  transform: scale(1.1);
+}
+
+.testimonial-quote {
+  font-size: 1.4em;
+  font-style: italic;
+  margin: 25px 0;
+  color: #444;
+  position: relative;
+  padding: 25px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-author {
+  color: #555;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1400px) {
+  .about-grid {
+    gap: 30px;
+  }
+  .about-title {
+    font-size: 2.8em;
+  }
+  .about-story-title {
+    font-size: 1.9em;
+  }
+  .about-story-text, .about-mission-text, .about-values-text {
+    font-size: 1.15em;
+  }
+  .about-mission-title, .about-values-title {
+    font-size: 1.9em;
+  }
+  .about-button {
+    padding: 14px 30px;
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .about-image {
+    max-width: 400px;
+  }
+  .about-mission, .about-values {
+    margin-top: 60px;
+  }
+  .team-grid {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .team-member {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .about-container {
+    padding: 50px 15px;
+  }
+  .about-title {
+    font-size: 2.5em;
+  }
+  .about-story-title, .about-mission-title, .about-values-title {
+    font-size: 1.8em;
+  }
+  .about-story-text, .about-mission-text, .about-values-text {
+    font-size: 1.1em;
+  }
+  .about-button {
+    padding: 12px 25px;
+    font-size: 1em;
+  }
+  .testimonial-quote {
+    font-size: 1.3em;
+  }
+  .team-grid {
+    flex-direction: row;
+    gap: 10px;
+  }
+  .team-member {
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 912px) {
+  .about-title {
+    font-size: 2.2em;
+  }
+  .about-story-title, .about-mission-title, .about-values-title {
+    font-size: 1.7em;
+  }
+  .about-story-text, .about-mission-text, .about-values-text {
+    font-size: 1.05em;
+  }
+  .about-button {
+    padding: 12px 20px;
+    font-size: 0.95em;
+  }
+  .testimonial-quote {
+    font-size: 1.25em;
+  }
+  .team-grid {
+    flex-direction: column;
+    gap: 25px;
+  }
+  .team-member {
+    max-width: 100%;
+    margin: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-container {
+    padding: 40px 10px;
+  }
+  .about-title {
+    font-size: 2em;
+  }
+  .about-story-title, .about-mission-title, .about-values-title {
+    font-size: 1.6em;
+  }
+  .about-story-text, .about-mission-text, .about-values-text {
+    font-size: 1em;
+  }
+  .about-button {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
+  .testimonial-quote {
+    font-size: 1.2em;
+  }
+  .team-grid {
+    flex-direction: column;
+    gap: 25px;
+  }
+  .team-member {
+    max-width: 100%;
+    margin: 50px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about-container {
+    padding: 30px 10px;
+  }
+  .about-title {
+    font-size: 1.8em;
+  }
+  .about-story-title, .about-mission-title, .about-values-title {
+    font-size: 1.5em;
+  }
+  .about-story-text, .about-mission-text, .about-values-text {
+    font-size: 0.95em;
+  }
+  .about-button {
+    padding: 10px 20px;
+    font-size: 0.85em;
+  }
+  .testimonial-quote {
+    font-size: 1.15em;
+  }
+  .team-grid {
+    flex-direction: column;
+    gap: 25px;
+  }
+  .team-member {
+    max-width: 100%;
+    margin: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-container {
+    padding: 25px 5px;
+  }
+  .about-title {
+    font-size: 1.6em;
+  }
+  .about-story-title, .about-mission-title, .about-values-title {
+    font-size: 1.4em;
+  }
+  .about-story-text, .about-mission-text, .about-values-text {
+    font-size: 0.9em;
+  }
+  .about-button {
+    padding: 8px 18px;
+    font-size: 0.8em;
+  }
+  .testimonial-quote {
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .about-container {
+    padding: 20px 5px;
+  }
+  .about-title {
+    font-size: 1.4em;
+  }
+  .about-story-title, .about-mission-title, .about-values-title {
+    font-size: 1.3em;
+  }
+  .about-story-text, .about-mission-text, .about-values-text {
+    font-size: 0.85em;
+  }
+  .about-button {
+    padding: 7px 16px;
+    font-size: 0.75em;
+  }
+  .testimonial-quote {
+    font-size: 1em;
+  }
+}

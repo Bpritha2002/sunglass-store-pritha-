@@ -1,0 +1,1589 @@
+/* Hero Section */
+.body{
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.hero-slider {
+  width: 100%;
+  overflow: hidden; /* Prevent horizontal scrolling */
+  position: relative;
+  z-index: 1; /* Ensure it's layered above the background */
+}
+
+.hero-slider .slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Ensure the image is centered both vertically and horizontally */
+}
+
+.hero-slider {
+  height: 600px; /* Set height for the slider */
+}
+
+.hero-slider img, .hero-image {
+  width: 100%;
+  height: 90vh;
+  object-fit: cover; /* Ensure the image covers the container */
+  filter: brightness(85%); /* Add slight darkening for better text contrast */
+  transition: transform 0.5s ease, filter 0.5s ease; /* Smooth transition for effects */
+  border-radius: 15px; /* Rounded corners for a modern look */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+
+/* Prevent any overflow from body or html */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  font-family: 'Times New Roman', Times, serif; /* Consistent font family */
+}
+
+/* Ensure containers and boxes do not cause overflow */
+.container, .box {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.hero {
+  background-size: cover;
+  padding: 2rem;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  color: #fff; /* White text for contrast against the header image */
+  height: 110vh; /* Set height for the hero section */
+  position: relative; /* Ensures relative positioning for child elements */
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(255, 127, 80, 0.5)); /* Peachy gradient overlay */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Parallax effect for background */
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Adds depth with an inset shadow */
+}
+.hero-description {
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  transform: translate(-50%, -50%); /* Center the text */
+  text-align: center;
+  color: #a41d11; /* White text color for contrast */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  max-width: 80%; /* Ensure it doesn’t exceed the width of the container */
+  background: rgba(96, 84, 84, 0.534); /* Semi-transparent background for better readability */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+  animation: fadeInSlideUp 1.5s ease-out;
+}
+
+.hero-description h1 {
+  font-size: 3rem; /* Large font size for main heading */
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle text shadow for better visibility */
+  letter-spacing: 2px; /* Slight letter spacing for a sleek look */
+  animation: popUp 1.5s ease-out 0.5s forwards;
+  opacity: 0;
+}
+
+.hero-description p {
+  font-size: 1.25rem; /* Slightly larger font size for the paragraph */
+  margin-top: 0;
+  margin-bottom: 15px;
+  line-height: 1.4; /* Improve readability */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Soft text shadow */
+  animation: fadeIn 2s ease-out 1.5s forwards;
+  opacity: 0;
+}
+
+/* Keyframe Animations */
+@keyframes fadeInSlideUp {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes popUp {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Description Styles */
+ .description {
+  font-size: 1.5rem; /* Slightly larger font size */
+  margin-bottom: 3rem; /* Increased space between description and CTA button */
+  color: #d5882ad8; /* Lighter off-white color */
+  text-shadow: 
+    1px 1px 5px rgba(0, 0, 0, 0.4), /* Subtle shadow for readability */
+    0 0 10px rgba(255, 182, 193, 0.3); /* Soft pink glow for a touch of warmth */
+  animation: fadeInUp 1.5s ease-in-out; /* Longer fade-in animation for smooth appearance */
+  font-weight: 300; /* Lighter weight for a refined look */
+  line-height: 1.6; /* Increase line height for better readability */
+  max-width: 80%; /* Limit width for better text alignment */
+  margin-left: auto; /* Center the text */
+  margin-right: auto; /* Center the text */
+  text-align: center;
+}
+
+/* Ensure no horizontal scroll */
+body {
+  overflow-x: hidden;
+}
+
+/* Title Styles */
+.title {
+  font-size: 3rem; /* Increase font size for better prominence */
+  margin-top: 50px; /* Space between title and description */
+  text-transform: uppercase; /* Uppercase text for emphasis */
+  letter-spacing: 4px;
+  text-align: center; /* More spacing between letters */
+  text-shadow: 
+    4px 4px 15px rgba(0, 0, 0, 0.6), /* Strong shadow for a dramatic effect */
+    0 0 25px rgba(255, 165, 0, 0.5); /* Subtle orange glow */
+  background: linear-gradient(45deg, #ff7f50, #ff6347); /* Gradient text */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeInDown 1.2s ease-in-out; /* Slightly longer animation */
+  font-weight: 700; /* Bolder text */
+  padding: 0 10px;
+  left: 50px; /* Padding for text to ensure gradient visibility */
+  border-radius: 5px; /* Rounded corners for text background */
+  background-clip: text; /* Clip the gradient to the text */
+}
+
+
+/* Custom animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CTA Button Styles */
+.cta-button {
+  position: relative;
+  background-color: #af6145; /* Peachy color for the button */
+  color: #fff;
+  padding: 30px;
+  font-size: 1.1rem;
+  border-radius: 10px; /* Rounded button for a softer look */
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3); /* Add depth with shadow */
+  border: none;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth hover transitions */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.cta-button img {
+  width: 300px;
+  height: 200px;
+  margin-right: 10px;
+}
+
+.cta-button:hover {
+  background-color: #e0ce46; /* Slightly darker peachy color on hover */
+  transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.cta-button:active {
+  transform: translateY(0); /* Reset lift on click */
+  box-shadow: none; /* Remove shadow on click */
+}
+/* Home.css */
+
+/* Existing styles */
+/* Home.css */
+
+/* Existing styles */
+
+/* Home.css */
+
+/* Existing styles */
+
+.new-arrivals-section {
+  padding: 60px 0;
+  background: #fafafa; /* Subtle background color */
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* Ensure no overflow */
+}
+
+.new-arrivals-title {
+  font-size: 3.5rem;
+  font-weight: bold; /* Bolder text */
+  color: #333;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.new-arrivals-description {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.new-arrival-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.new-arrival-item {
+  position: relative;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.new-arrival-item:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.786); /* Enhanced shadow */
+}
+
+.new-arrival-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.new-arrival-item:hover .new-arrival-image {
+  opacity: 0.20;
+}
+
+.new-arrival-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.918), rgb(190, 12, 12)); /* Gradient overlay */
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.new-arrival-item:hover .new-arrival-overlay {
+  transform: translateY(0);
+}
+
+.new-arrival-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.new-arrival-price {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.view-details-button {
+  background-color: transparent;
+  border: 2px solid #ff5722; /* Accent color */
+  color: white;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.view-details-button:hover {
+  background-color: #ff5722;
+  color: #fff;
+}
+/* Extra Small Devices (Portrait Phones) */
+/* Extra Small Devices (Portrait Phones) */
+@media (min-width: 320px) {
+  .hero-slider {
+    height: 40vh; /* Further reduce height */
+  }
+
+  .hero-slider img, .hero-image {
+    height: 35vh; /* Adjust height for images */
+  }
+
+  .hero-description {
+    top: 30%;
+    right: -70px;
+    width: 50%;
+  }
+
+  .hero-description h1 {
+    font-size: 1rem; /* Smaller heading size */
+  }
+
+  .hero-description p {
+    font-size: 0.75rem; /* Smaller paragraph text */
+  }
+
+  .description {
+    font-size: 1rem; /* Smaller font size */
+  }
+
+  .title {
+    font-size: 2rem; /* Smaller title size */
+  }
+  .cta-button-container {
+    display: flex; /* Enable flexbox layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    gap: 5px; /* Space between button and image */
+    flex-wrap: wrap; /* Allow wrapping if there are multiple containers */
+  }
+
+  .cta-button {
+    padding: 20px; /* Adjust padding */
+     margin-left: 280px;
+     margin-right: 280px;
+     
+    font-size: 1.4rem; /* Larger font size */
+     /* Margin around the button */
+  }
+
+  .cta-button img {
+    width: 220px; /* Adjust image size */
+    height: 150px; /* Adjust image size */
+    object-fit: cover; /* Ensure image covers its container */
+  }
+  
+  
+
+  .new-arrivals-title {
+    font-size: 1.8rem; /* Smaller title size */
+  }
+
+  .new-arrivals-description {
+    font-size: 0.9rem; /* Smaller description font size */
+  }
+
+  .new-arrival-item {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Reduced shadow */
+  }
+
+  .new-arrival-image {
+    height: 170px; /* Adjust image height */
+  }
+
+  .new-arrival-title {
+    font-size: 0.9rem; /* Smaller title size */
+  }
+
+  .new-arrival-price {
+    font-size: 1rem; /* Adjust price font size */
+  }
+
+  .view-details-button {
+    font-size: 0.7rem; /* Smaller button font size */
+  }
+}
+
+/* Small Devices (Landscape Phones) */
+@media (min-width: 345px) and (max-width: 411px) {
+  .hero-slider {
+    height: 45vh; /* Adjust height */
+  }
+
+  .hero-slider img, .hero-image {
+    height: 45vh; /* Adjust height for images */
+  }
+
+  .hero-description {
+    top: 40%;
+    right: -70px;
+    width: 50%;
+    
+  }
+
+  .hero-description h1 {
+    font-size: 1rem; /* Slightly larger heading size */
+  }
+
+  .hero-description p {
+    font-size: 0.75rem; /* Slightly larger paragraph text */
+  }
+
+  .description {
+    font-size: 1.2rem; /* Slightly larger font size */
+  }
+
+  .title {
+    font-size: 2.5rem; /* Adjust title size */
+  }
+  .cta-button-container {
+    display: flex; /* Enable flexbox layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    gap: 5px; /* Space between button and image */
+    flex-wrap: wrap; /* Allow wrapping if there are multiple containers */
+  }
+
+  .cta-button {
+    padding: 20px; /* Adjust padding */
+     margin-left: 200px;
+     margin-right: 200px;
+     
+    font-size: 1.4rem; /* Larger font size */
+     /* Margin around the button */
+  }
+
+  .cta-button img {
+    width: 250px; /* Adjust image size */
+    height: 150px; /* Adjust image size */
+    object-fit: cover; /* Ensure image covers its container */
+  }
+  
+
+  .new-arrivals-title {
+    font-size: 2rem; /* Adjust title size */
+  }
+
+  .new-arrivals-description {
+    font-size: 1rem; /* Adjust description font size */
+  }
+
+  .new-arrival-item {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Adjust shadow */
+  }
+
+  .new-arrival-image {
+    height: 180px; /* Adjust image height */
+  }
+
+  .new-arrival-title {
+    font-size: 1rem; /* Adjust title size */
+  }
+
+  .new-arrival-price {
+    font-size: 1.2rem; /* Adjust price font size */
+  }
+
+  .view-details-button {
+    font-size: 0.8rem; /* Adjust button font size */
+  }
+}
+@media (min-width: 412px) and (max-width: 539px) {
+  .hero-slider {
+    height: 42vh; /* Adjust height */
+  }
+
+  .hero-slider img, .hero-image {
+    height: 42vh; /* Adjust height for images */
+  }
+
+  .hero-description {
+    top: 35%;
+    right: -80px;
+    width: 50%;
+    
+  }
+
+  .hero-description h1 {
+    font-size: 1rem; /* Slightly larger heading size */
+  }
+
+  .hero-description p {
+    font-size: 0.75rem; /* Slightly larger paragraph text */
+  }
+
+  .description {
+    font-size: 1.2rem; /* Slightly larger font size */
+  }
+
+  .title {
+    font-size: 2.5rem; /* Adjust title size */
+  }
+  .cta-button-container {
+    display: flex; /* Enable flexbox layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    gap: 5px; /* Space between button and image */
+    flex-wrap: wrap; /* Allow wrapping if there are multiple containers */
+  }
+
+  .cta-button {
+    padding: 20px; /* Adjust padding */
+     margin-left: 200px;
+     margin-right: 200px;
+     
+    font-size: 1.4rem; /* Larger font size */
+     /* Margin around the button */
+  }
+
+  .cta-button img {
+    width: 250px; /* Adjust image size */
+    height: 150px; /* Adjust image size */
+    object-fit: cover; /* Ensure image covers its container */
+  }
+  
+
+  .new-arrivals-title {
+    font-size: 2rem; /* Adjust title size */
+  }
+
+  .new-arrivals-description {
+    font-size: 1rem; /* Adjust description font size */
+  }
+
+  .new-arrival-item {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Adjust shadow */
+  }
+
+  .new-arrival-image {
+    height: 200px; /* Adjust image height */
+  }
+
+  .new-arrival-title {
+    font-size: 1rem; /* Adjust title size */
+  }
+
+  .new-arrival-price {
+    font-size: 1.2rem; /* Adjust price font size */
+  }
+
+  .view-details-button {
+    font-size: 0.8rem; /* Adjust button font size */
+  }
+}
+
+
+/* Large Phones / Small Tablets */
+@media (min-width: 540px) and (max-width: 767px) {
+  .hero-slider {
+    height: 60vh; /* Adjust height */
+  }
+
+  .hero-slider img, .hero-image {
+    height: 55vh; /* Adjust height for images */
+  }
+
+  .hero-description {
+    top: 40%;
+    right: -120px;
+    width: 50%;
+    height: 17%;
+  }
+
+  .hero-description h1 {
+    font-size: 1.5rem; /* Larger heading size */
+  }
+
+  .hero-description p {
+    font-size: 1rem; /* Larger paragraph text */
+  }
+
+  .description {
+    font-size: 1.1rem; /* Larger font size */
+  }
+
+  .title {
+    font-size: 2.3rem; /* Larger title size */
+  }
+  .cta-button-container {
+    display: flex; /* Enable flexbox layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    gap: 5px; /* Space between button and image */
+    flex-wrap: wrap; /* Allow wrapping if there are multiple containers */
+  }
+
+  .cta-button {
+    padding: 20px; /* Adjust padding */
+     margin-left: 200px;
+     margin-right: 170px;
+    font-size: 1.4rem; /* Larger font size */
+     /* Margin around the button */
+  }
+
+  .cta-button img {
+    width: 250px; /* Adjust image size */
+    height: 150px; /* Adjust image size */
+    object-fit: cover; /* Ensure image covers its container */
+  }
+  .new-arrival-grid{
+    
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .new-arrivals-title {
+    font-size: 2.5rem; /* Larger title size */
+  }
+
+  .new-arrivals-description {
+    font-size: 1.1rem; /* Larger description font size */
+  }
+
+  .new-arrival-item {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Adjust shadow */
+  }
+
+  .new-arrival-image {
+    height: 200px;
+     /* Adjust image height */
+  }
+
+  .new-arrival-title {
+    font-size: 1.1rem; /* Larger title size */
+  }
+
+  .new-arrival-price {
+    font-size: 1.3rem; /* Larger price font size */
+  }
+
+  .view-details-button {
+    font-size: 0.9rem; /* Larger button font size */
+  }
+}
+
+/* Medium Tablets */
+@media (min-width: 768px) and (max-width: 911px) {
+  .hero-slider {
+    height: 60vh; /* Adjust height */
+  }
+
+  .hero-slider img, .hero-image {
+    height: 65vh; /* Adjust height for images */
+  }
+
+  .hero-description {
+    top: 50%;
+    right: -180px;
+    width: 50%;
+  }
+
+  .hero-description h1 {
+    font-size: 2rem; /* Larger heading size */
+  }
+
+  .hero-description p {
+    font-size: 1rem; /* Larger paragraph text */
+  }
+
+  .description {
+    font-size: 1.4rem; /* Larger font size */
+  }
+
+  .title {
+    font-size: 3rem; /* Larger title size */
+  }
+  .cta-button-container {
+    display: flex; /* Enable flexbox layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    gap: 5px; /* Space between button and image */
+    flex-wrap: wrap; /* Allow wrapping if there are multiple containers */
+  }
+
+  .cta-button {
+    padding: 20px; /* Adjust padding */
+     margin-left: 200px;
+     margin-right: 170px;
+    font-size: 1.4rem; /* Larger font size */
+     /* Margin around the button */
+  }
+
+  .cta-button img {
+    width: 250px; /* Adjust image size */
+    height: 150px; /* Adjust image size */
+    object-fit: cover; /* Ensure image covers its container */
+  }
+  
+
+  .new-arrivals-title {
+    font-size: 3rem; /* Larger title size */
+  }
+
+  .new-arrivals-description {
+    font-size: 1.2rem; /* Larger description font size */
+  }
+
+  .new-arrival-item {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Adjust shadow */
+  }
+
+  .new-arrival-image {
+    height: 180px; /* Adjust image height */
+  }
+
+  .new-arrival-title {
+    font-size: 1.2rem; /* Larger title size */
+  }
+
+  .new-arrival-price {
+    font-size: 1.4rem; /* Larger price font size */
+  }
+
+  .view-details-button {
+    font-size: 1rem; /* Larger button font size */
+  }
+}
+
+/* Large Tablets / Small Desktops */
+@media (min-width: 912px) and (max-width: 1023px) {
+  .hero-slider {
+    height: 70vh; /* Adjust height */
+  }
+
+  .hero-slider img, .hero-image {
+    height: 60vh; /* Adjust height for images */
+  }
+
+  .hero-description {
+    top: 40%;
+  right: -170px;
+  width: 50%;
+  }
+
+  .hero-description h1 {
+    font-size: 3rem; /* Larger heading size */
+  }
+
+  .hero-description p {
+    font-size: 1.3rem; /* Larger paragraph text */
+  }
+
+  .description {
+    font-size: 1.5rem; /* Larger font size */
+  }
+
+  .title {
+    font-size: 3.2rem; /* Larger title size */
+  }
+
+  .cta-button-container {
+    display: flex; /* Enable flexbox layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    gap: 5px; /* Space between button and image */
+    flex-wrap: wrap; /* Allow wrapping if there are multiple containers */
+  }
+
+  .cta-button {
+    padding: 20px; /* Adjust padding */
+     margin-left: 220px;
+     margin-right: 190px;
+    font-size: 1.4rem; /* Larger font size */
+     /* Margin around the button */
+  }
+
+  .cta-button img {
+    width: 250px; /* Adjust image size */
+    height: 150px; /* Adjust image size */
+    object-fit: cover; /* Ensure image covers its container */
+  }
+
+  /* Ensures two items per row */
+  .cta-button-container > * {
+    flex: 1 1 calc(50% - 10px); /* Adjust flex-basis to fit 2 items per row */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+  }
+
+  .new-arrival-grid {
+    display: grid; /* Enable grid layout */
+    grid-template-columns: repeat(2, 1fr); /* 4 columns of equal width */
+    gap: 20px; /* Space between items */
+  }
+
+  .new-arrivals-title {
+    font-size: 3.2rem; /* Larger title size */
+  }
+
+  .new-arrivals-description {
+    font-size: 1.3rem; /* Larger description font size */
+  }
+
+  .new-arrival-item {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1); /* Adjust shadow */
+  }
+
+  .new-arrival-image {
+    height: 200px; /* Adjust image height */
+  }
+
+  .new-arrival-title {
+    font-size: 1.3rem; /* Larger title size */
+  }
+
+  .new-arrival-price {
+    font-size: 1.5rem; /* Larger price font size */
+  }
+
+  .view-details-button {
+    font-size: 1.1rem; /* Larger button font size */
+  }
+}
+
+/* Large Desktops */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .hero-slider {
+    height: 80vh; /* Adjust height */
+  }
+
+  .hero-slider img, .hero-image {
+    height: 80vh; /* Adjust height for images */
+    width: 100%;
+  }
+
+  .hero-description {
+    top: 50%;
+    right: -120px;
+     width: 40%;
+  
+  }
+
+  .hero-description h1 {
+    font-size: 2.2rem; /* Larger heading size */
+  }
+
+  .hero-description p {
+    font-size: 1.3rem; /* Larger paragraph text */
+  }
+
+  .description {
+    font-size: 1.3rem; /* Larger font size */
+  }
+
+  .title {
+    font-size: 3rem; /* Larger title size */
+  }
+
+  .cta-button-container {
+    display: flex; /* Enable flexbox layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    gap: 5px; /* Space between button and image */
+  }
+
+  .cta-button {
+    padding: 15px; /* Adjust padding */
+    font-size: 1.4rem; /* Larger font size */
+    margin: 8px;
+  }
+
+  .cta-button img {
+    width: 250px; /* Adjust image size */
+    height: 150px; /* Adjust image size */
+    object-fit: cover; /* Ensure image covers its container */
+  }
+
+
+  
+    .new-arrival-grid {
+      display: grid; /* Enable grid layout */
+      grid-template-columns: repeat(4, 1fr); /* 4 columns of equal width */
+      gap: 20px; /* Space between items */
+    }
+  
+    .new-arrival-item {
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1); /* Adjust shadow */
+    }
+  
+    .new-arrival-image {
+      height: 220px; /* Adjust image height */
+      width: 100%; /* Make image take up full width of the item */
+      object-fit: cover; /* Ensure image covers its container */
+    }
+  
+    .new-arrival-title {
+      font-size: 1.4rem; /* Larger title size */
+    }
+  
+    .new-arrival-price {
+      font-size: 1.6rem; /* Larger price font size */
+    }
+  
+    .view-details-button {
+      font-size: 1.2rem; /* Larger button font size */
+    }
+}
+  
+
+/* Extra Large Desktops */
+@media (min-width: 1280px) {
+  .hero-slider {
+    height: 90vh; /* Adjust height */
+  }
+
+  .hero-slider img, .hero-image {
+    height: 90vh; /* Adjust height for images */
+  }
+
+  .hero-description {
+    top: 50%;
+    right: -140px;
+    width: 40%;
+    
+  }
+
+  .hero-description h1 {
+    font-size: 2.5rem; /* Larger heading size */
+  }
+
+  .hero-description p {
+    font-size: 1.3rem; /* Larger paragraph text */
+  }
+
+  .description {
+    font-size: 1.7rem; /* Larger font size */
+  }
+
+  .title {
+    font-size: 3.2rem; /* Larger title size */
+  }
+  
+  .cta-button-container {
+    display: flex; /* Enable flexbox layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    gap: 5px; /* Space between button and image */
+  }
+
+  .cta-button {
+    padding: 15px; /* Adjust padding */
+    font-size: 1.4rem; /* Larger font size */
+    margin: 8px;
+  }
+
+  .cta-button img {
+    width: 250px; /* Adjust image size */
+    height: 150px; /* Adjust image size */
+    object-fit: cover; /* Ensure image covers its container */
+  }
+  
+
+
+  .new-arrivals-title {
+    font-size: 3.1rem; /* Larger title size */
+  }
+
+  .new-arrivals-description {
+    font-size: 1.5rem; /* Larger description font size */
+  }
+
+  .new-arrival-item {
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1); /* Adjust shadow */
+  }
+
+  .new-arrival-image {
+    height: 240px; /* Adjust image height */
+  }
+
+  .new-arrival-title {
+    font-size: 1.5rem; /* Larger title size */
+  }
+
+  .new-arrival-price {
+    font-size: 1.8rem; /* Larger price font size */
+  }
+
+  .view-details-button {
+    font-size: 1.3rem; /* Larger button font size */
+  }
+  .new-arrivals-section{
+   min-width: 90%;
+  }
+  
+}
+@media (min-width: 1350px) {
+  .hero-slider {
+    height: 90vh; /* Adjust height */
+  }
+
+  .hero-slider img, .hero-image {
+    height: 90vh; /* Adjust height for images */
+  }
+
+  .hero-description {
+    top: 50%;
+    right: -140px;
+    width: 40%;
+    
+  }
+
+  .hero-description h1 {
+    font-size: 2.5rem; /* Larger heading size */
+  }
+
+  .hero-description p {
+    font-size: 1.3rem; /* Larger paragraph text */
+  }
+
+  .description {
+    font-size: 1.7rem; /* Larger font size */
+  }
+
+  .title {
+    font-size: 3.2rem; /* Larger title size */
+  }
+  
+  .cta-button-container {
+    display: flex; /* Enable flexbox layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    gap: 5px; /* Space between button and image */
+  }
+
+  .cta-button {
+    padding: 25px; /* Adjust padding */
+    font-size: 1.4rem; /* Larger font size */
+    margin: 12px;
+  }
+
+  .cta-button img {
+    width: 260px; /* Adjust image size */
+    height: 200px; /* Adjust image size */
+    object-fit: cover; /* Ensure image covers its container */
+  }
+  
+
+
+  .new-arrivals-title {
+    font-size: 3.1rem; /* Larger title size */
+  }
+
+  .new-arrivals-description {
+    font-size: 1.5rem; /* Larger description font size */
+  }
+
+  .new-arrival-item {
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1); /* Adjust shadow */
+  }
+
+  .new-arrival-image {
+    height: 240px; /* Adjust image height */
+  }
+
+  .new-arrival-title {
+    font-size: 1.5rem; /* Larger title size */
+  }
+
+  .new-arrival-price {
+    font-size: 1.8rem; /* Larger price font size */
+  }
+
+  .view-details-button {
+    font-size: 1.3rem; /* Larger button font size */
+  }
+  .new-arrivals-section{
+   min-width: 90%;
+  }
+  
+}
+/* Featured Collections Section */
+.featured-collections-section {
+  background: linear-gradient(to right, #f5f7fa, #c3cfe2); /* Soft gradient background */
+  padding: 60px 30px;
+  text-align: center;
+  border-radius: 20px;
+  margin-top: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.featured-collections-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+  font-family: 'Times New Roman', serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.featured-collections-description {
+  font-size: 1.3rem;
+  color: #555;
+  margin-bottom: 50px;
+  font-family: 'Arial', sans-serif;
+}
+
+.collection-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* .collection-item:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+} */
+
+.collection-image {
+  width: 100%;
+  height: 200px; /* Fixed height for uniformity */
+  object-fit: cover;
+  display: block;
+  border-radius: 15px 15px 0 0;
+  transition: transform 0.4s ease;
+}
+
+.collection-item:hover .collection-image {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.collection-title {
+  padding: 15px;
+  background-color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Times New Roman', serif;
+  color: #444;
+  border-radius: 0 0 15px 15px;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  background: linear-gradient(to bottom right, #ffffff, #f3f4f6);
+  padding: 80px 40px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials-section::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.05) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+  filter: blur(20px);
+}
+
+.testimonials-title {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 50px;
+  font-family: 'Times New Roman', serif;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.testimonial-item {
+  padding: 40px 30px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background: #ffffff;
+  transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+  margin: 20px 0;
+}
+
+.testimonial-item:hover {
+  transform: translateY(-15px) scale(1.02);
+  border-color: #666;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-item::before {
+  content: open-quote;
+  font-size: 6rem;
+  color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: -40px;
+  left: -30px;
+  z-index: 0;
+  transform: rotate(10deg);
+}
+
+.testimonial-item::after {
+  content: close-quote;
+  font-size: 6rem;
+  color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  bottom: -40px;
+  right: -30px;
+  z-index: 0;
+  transform: rotate(-10deg);
+}
+
+.testimonial-item:hover::before, .testimonial-item:hover::after {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-item p {
+  font-size: 1.4rem;
+  color: #555;
+  line-height: 1.6;
+  font-family: 'Georgia', serif;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 20px;
+}
+
+.customer-name {
+  font-weight: bold;
+  margin-top: 20px;
+  color: #666;
+  font-family: 'Times New Roman', serif;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Newsletter Section */
+.newsletter-section {
+  background: linear-gradient(to right, #d0b38b, #e48768);
+  padding: 60px 30px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.newsletter-section::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
+  border-radius: 50%;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+}
+
+.newsletter-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+  font-family: 'Times New Roman', serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+  letter-spacing: 1px;
+}
+
+.newsletter-description {
+  font-size: 1.4rem;
+  color: #555;
+  margin-bottom: 40px;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  z-index: 1;
+  line-height: 1.7;
+}
+
+.newsletter-signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.newsletter-input {
+  padding: 15px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  width: 350px;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.newsletter-input:focus {
+  border-color: #333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+.newsletter-buttonn {
+  padding: 15px 30px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* .newsletter-buttonn:hover {
+  background-color: #555;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+} */
+@media (max-width: 1440px) {
+  .featured-collections-title,
+  .testimonials-title,
+  .newsletter-title {
+    font-size: 2.2rem;
+  }
+
+  .featured-collections-description,
+  .newsletter-description {
+    font-size: 1.2rem;
+  }
+
+  .newsletter-input {
+    width: 300px;
+  }
+}
+@media (max-width: 1024px) {
+  .featured-collections-section,
+  .testimonials-section,
+  .newsletter-section {
+    padding: 40px 20px;
+  }
+
+  .featured-collections-title,
+  .testimonials-title,
+  .newsletter-title {
+    font-size: 2rem;
+  }
+
+  .featured-collections-description,
+  .newsletter-description {
+    font-size: 1.1rem;
+  }
+
+  .collection-item {
+    margin: 15px 0;
+  }
+
+  .collection-image {
+    height: 180px;
+  }
+
+  .newsletter-input {
+    width: 280px;
+  }
+}
+@media (max-width: 992px) {
+  .featured-collections-section,
+  .testimonials-section,
+  .newsletter-section {
+    padding: 40px 20px;
+  }
+
+  .featured-collections-title,
+  .testimonials-title,
+  .newsletter-title {
+    font-size: 1.9rem;
+  }
+
+  .featured-collections-description,
+  .newsletter-description {
+    font-size: 1.1rem;
+  }
+
+  .collection-item {
+    margin: 15px 0;
+  }
+
+  .collection-image {
+    height: 280px;
+  }
+
+  .newsletter-input {
+    width: 280px;
+  }
+}
+@media (max-width: 768px) {
+  .featured-collections-section,
+  .testimonials-section,
+  .newsletter-section {
+    padding: 30px 15px;
+  }
+
+  .featured-collections-title,
+  .testimonials-title,
+  .newsletter-title {
+    font-size: 1.8rem;
+  }
+
+  .featured-collections-description,
+  .newsletter-description {
+    font-size: 1rem;
+  }
+
+  .collection-item {
+    margin: 10px 0;
+  }
+
+  .collection-image {
+    height: 250px;
+  
+  }
+
+  .newsletter-input {
+    width: 250px;
+  }
+}
+@media (max-width: 576px) {
+  .featured-collections-section,
+  .testimonials-section,
+  .newsletter-section {
+    padding: 20px 10px;
+    margin-top: 20px;
+  }
+
+  .featured-collections-title,
+  .testimonials-title,
+  .newsletter-title {
+    font-size: 1.6rem;
+  }
+
+  .featured-collections-description,
+  .newsletter-description {
+    font-size: 0.9rem;
+  }
+
+  .collection-item {
+    margin: 10px 0;
+  }
+
+  .collection-image {
+    height: 220px;
+  }
+
+  .newsletter-input {
+    width: 200px;
+  }
+
+  .newsletter-buttonn {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .featured-collections-section,
+  .testimonials-section,
+  .newsletter-section {
+    padding: 20px 10px;
+    margin-top: 20px;
+  }
+
+  .featured-collections-title,
+  .testimonials-title,
+  .newsletter-title {
+    font-size: 1.6rem;
+  }
+
+  .featured-collections-description,
+  .newsletter-description {
+    font-size: 0.9rem;
+  }
+
+  .collection-item {
+    margin: 10px 0;
+  }
+
+  .collection-image {
+    height: 140px;
+  }
+
+  .newsletter-input {
+    width: 200px;
+  }
+
+  .newsletter-buttonn {
+    width: 150px;
+  }
+}
+@media (max-width: 400px) {
+  .newsletter-input {
+    height: auto;
+    margin: 5px;
+  }
+
+  .newsletter-buttonn {
+ width: auto;
+  }
+}
+@media (max-width: 320px) {
+  .featured-collections-section,
+  .testimonials-section,
+  .newsletter-section {
+    padding: 15px 5px;
+    margin-top: 15px;
+  }
+
+  .featured-collections-title,
+  .testimonials-title,
+  .newsletter-title {
+    font-size: 1.4rem;
+  }
+
+  .featured-collections-description,
+  .newsletter-description {
+    font-size: 0.8rem;
+  }
+
+  .collection-item {
+    margin: 5px 0;
+  }
+
+  .collection-image {
+    height: 120px;
+  }
+
+  .newsletter-input {
+    width: 180px;
+  }
+
+  
+}

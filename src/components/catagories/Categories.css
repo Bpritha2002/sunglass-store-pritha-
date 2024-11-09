@@ -1,0 +1,335 @@
+.category-container {
+  padding: 0px 70px;
+  background-color: #f8f9fa; /* Light off-white background */
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif; /* Updated font family */
+  margin-bottom: 30px;
+
+}
+
+.category-container h1 {
+  font-size: 2.4rem; /* Slightly larger font size */
+  color: #333;
+  margin-bottom: 20px;
+  font-family: 'Georgia', serif; /* Elegant font for headings */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+}
+
+.category-container p {
+  font-size: 1.3rem; /* Slightly larger font size */
+  color: #555;
+  margin-bottom: 30px;
+  font-family: 'Arial', sans-serif; /* Clean and readable font for paragraphs */
+}
+
+.category-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 20px; /* Space between cards */
+ 
+}
+
+.category-card {
+  background-color: #fff; /* Card background color */
+  border: 1px solid #ddd; /* Card border */
+  border-radius: 12px; /* More rounded corners */
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.category-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02); /* Slight zoom effect on hover */
+}
+
+.card-image {
+  width: 100%;
+  height: 250px; /* Fixed height for images */
+  object-fit: cover;
+  transition: opacity 0.3s;
+}
+
+.card-image:hover {
+  opacity: 0.8; /* Slight fade effect on hover */
+}
+
+.card-content {
+  padding: 20px;
+  text-align: left;
+  background: linear-gradient(to bottom, #fff, #f9f9f9); /* Subtle gradient background */
+}
+
+.card-title {
+  font-size: 1.4rem;
+  margin: 0;
+  color: #333;
+  font-family: 'Verdana', sans-serif; /* Modern font for card titles */
+  font-weight: bold; /* Bold text for titles */
+}
+
+.card-description {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 10px 0;
+  font-family: 'Arial', sans-serif; /* Clean and readable font for descriptions */
+}
+
+.card-price {
+  font-size: 1.3rem;
+  color: #007bff; /* Highlight price */
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif; /* Classic font for price */
+}
+
+.show-more-button {
+  background-color: #ffc107; /* Primary color */
+  color: black;
+  border: none;
+  padding: 15px 30px; /* Larger padding */
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 10px; /* Rounded corners */
+  margin-top: 30px;
+  margin: 20px;
+  font-family: 'Courier New', Courier, monospace; /* Distinctive font for button text */
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.show-more-button:hover {
+  background-color: #ffb700; /* Slightly darker shade of primary color */
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.show-more-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5); /* Increased focus shadow */
+}
+
+/* Media Queries for responsiveness */
+
+/* Large desktops and tablets */
+@media (max-width: 1200px) {
+  .category-container {
+    padding: 0px 50px;
+  }
+  
+  .category-cards {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  }
+  
+  .category-container h1 {
+    font-size: 2.2rem; /* Adjusted font size */
+  }
+  
+  .category-container p {
+    font-size: 1.2rem; /* Adjusted font size */
+  }
+}
+
+/* Tablets and smaller desktops */
+@media (max-width: 992px) {
+  .category-container {
+    padding: 0px 40px;
+  }
+  
+  .category-cards {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  }
+  
+  .category-container h1 {
+    font-size: 2rem; /* Adjusted font size */
+  }
+  
+  .category-container p {
+    font-size: 1.1rem; /* Adjusted font size */
+  }
+  
+  .show-more-button {
+    padding: 12px 24px; /* Adjusted padding */
+    font-size: 1.1rem; /* Adjusted font size */
+  }
+}
+@media (max-width: 830px) {
+  .category-container {
+    padding: 0px 40px;
+  }
+  
+  .category-cards {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  }
+  
+  .category-container h1 {
+    font-size: 2rem; /* Adjusted font size */
+  }
+  
+  .category-container p {
+    font-size: 1.1rem; /* Adjusted font size */
+  }
+  
+  .show-more-button {
+    padding: 12px 24px; /* Adjusted padding */
+    font-size: 1.1rem; /* Adjusted font size */
+  }
+}
+
+
+/* Small tablets and large mobiles */
+@media (max-width: 768px) {
+  .category-container {
+    padding: 0px 30px;
+  }
+  .card-image{
+    height: 350px;
+    
+  }
+  .category-cards {
+    grid-template-columns: 1fr; /* 1 card per row */
+  }
+  
+  .category-container h1 {
+    font-size: 1.8rem; /* Adjusted font size */
+  }
+  
+  .category-container p {
+    font-size: 1rem; /* Adjusted font size */
+  }
+  
+  .show-more-button {
+    padding: 10px 20px; /* Adjusted padding */
+    font-size: 1rem; /* Adjusted font size */
+  }
+}
+
+/* Small mobiles */
+@media (max-width: 576px) {
+  .category-container {
+    padding: 0px 20px;
+  }
+  .card-image{
+    height: 300px;
+    
+  }
+  .category-container h1 {
+    font-size: 1.6rem; /* Further adjusted font size */
+  }
+  
+  .category-container p {
+    font-size: 0.9rem; /* Further adjusted font size */
+  }
+  
+  .show-more-button {
+    padding: 8px 16px; /* Further adjusted padding */
+    font-size: 0.9rem;
+    margin-bottom: 20px;; /* Further adjusted font size */
+  }
+}
+
+/* Very small devices (portrait phones) */
+@media (max-width: 375px) {
+  .category-container {
+    padding: 0px 10px;
+  }
+  .card-image{
+    height: 200px;
+    width: 100%;
+  }
+  .category-container h1 {
+    font-size: 1.4rem; /* Further adjusted font size */
+  }
+  
+  .category-container p {
+    font-size: 0.8rem; /* Further adjusted font size */
+  }
+  
+  .show-more-button {
+    padding: 6px 12px; /* Further adjusted padding */
+    font-size: 0.8rem; /* Further adjusted font size */
+  }
+}
+
+/* Extra small devices (landscape phones) */
+@media (max-width: 320px) {
+  .category-container {
+    padding: 0px 5px;
+  }
+  
+  .category-container h1 {
+    font-size: 1.2rem; /* Further reduced font size */
+  }
+  
+  .category-container p {
+    font-size: 0.7rem; /* Further reduced font size */
+  }
+  
+  .show-more-button {
+    padding: 4px 10px; /* Further reduced padding */
+    font-size: 0.7rem; /* Further reduced font size */
+  }
+  @media (min-width: 1201px) {
+    .category-container {
+      padding: 0px 50px;
+    }
+    .card-image{
+      height: 500px;
+    }
+    
+    .category-cards {
+      grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    }
+    
+    .category-container h1 {
+      font-size: 2.2rem; /* Adjusted font size */
+    }
+    
+    .category-container p {
+      font-size: 1.2rem; /* Adjusted font size */
+    }
+    
+  }
+  @media (max-width: 1025px) {
+    .category-container {
+      padding: 0px 50px;
+    }
+    .card-image{
+      height: 500px;
+    }
+    
+    .category-cards {
+      grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    }
+    
+    .category-container h1 {
+      font-size: 2.2rem; /* Adjusted font size */
+    }
+    
+    .category-container p {
+      font-size: 1.2rem; /* Adjusted font size */
+    }
+    
+  }
+  @media (max-width: 1300px) {
+    .category-container {
+      padding: 0px 50px;
+      
+    }
+    .card-image{
+      height: 500px;
+    }
+    
+    .category-cards {
+      grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    }
+    
+    .category-container h1 {
+      font-size: 2.2rem; /* Adjusted font size */
+    }
+    
+    .category-container p {
+      font-size: 1.2rem; /* Adjusted font size */
+    }
+    
+  }
+}

@@ -1,0 +1,115 @@
+/* Container for the entire product display */
+.card-all {
+  padding: 20px;
+}
+
+/* Style for the grid container */
+.grid {
+  background-color: #f8f9fa; /* Off-white background color */
+}
+
+/* Styling for individual product cards */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Style for each card */
+.card {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 300px;
+  background-color: #ffffff; /* White background for cards */
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.02); /* Slight zoom effect on hover */
+}
+
+/* Style for card image */
+.card-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Style for card body content */
+.card-body {
+  padding: 16px;
+}
+
+/* Heading styles inside the card */
+.card-body h5 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #333;
+}
+
+.card-body h4 {
+  font-size: 1rem;
+  margin: 8px 0;
+  color: #666;
+}
+
+/* Container for buttons inside each card */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+/* Style for the edit and delete buttons */
+.edit-button, .delete-button {
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.edit-button {
+  background-color: #007bff; /* Blue background for edit button */
+}
+
+.delete-button {
+  background-color: #dc3545; /* Red background for delete button */
+}
+
+/* Styling for the alert component */
+.alert-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+/* Styles for the pagination component */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+/* Styling for the pagination buttons */
+.MuiPaginationItem-root {
+  border-radius: 4px;
+  margin: 0 4px;
+}
+
+/* Add custom styles for pagination component if needed */
+.MuiPagination-ul {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pagination-container {
+  background-color: #d8cfc4; /* Brownish background color for pagination container */
+  padding: 10px;
+  border-radius: 4px;
+}
