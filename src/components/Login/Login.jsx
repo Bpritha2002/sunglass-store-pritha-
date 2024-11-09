@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { TextField, Button, Box, Typography, Grid, Link } from "@mui/material";
 import { signin } from "../../Redux/authSlice";
@@ -36,7 +36,7 @@ const theme = createTheme({
 });
 
 function Login() {
-   useSelector((state) => state.contents);
+  useSelector((state) => state.contents);
   const {
     register,
     handleSubmit,
@@ -49,17 +49,21 @@ function Login() {
     dispatch(signin(data));
   };
 
-  const RedirectUser = () => {
-    let token = localStorage.getItem("token");
-    let isInLoginPage = window.location.pathname.toLowerCase() === "/signin";
-    if (token) {
-      isInLoginPage && navigate("/");
-    }
-  };
-
   useEffect(() => {
-    RedirectUser();
-  }, [RedirectUser]);
+    // Redirects the user if a valid token exists
+    const redirectUser = () => {
+      const token = localStorage.getItem("token");
+      const isInLoginPage = window.location.pathname.toLowerCase() === "/signin";
+
+      // If token exists and we're on the login page, redirect to home
+      if (token && isInLoginPage) {
+        navigate("/"); // Navigate to the home page or dashboard
+      }
+    };
+
+    // Call redirectUser after component mounts
+    redirectUser();
+  }); // Dependency array ensures navigate function is up-to-date
 
   return (
     <ThemeProvider theme={theme}>
@@ -121,9 +125,7 @@ function Login() {
                   variant="outlined"
                   {...register("email", { required: "Please enter your email" })}
                   error={!!errors.email}
-                  helperText={
-                    errors.email ? errors.email.message : "Enter your email"
-                  }
+                  helperText={errors.email ? errors.email.message : "Enter your email"}
                   sx={{
                     mb: 2,
                     '& input': {

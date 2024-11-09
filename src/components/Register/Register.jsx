@@ -57,18 +57,19 @@ function Registration() {
     }
   };
 
-  const RedirectUser = () => {
-    let name = localStorage.getItem("first_name");
-    let isRegisterPage = window.location.pathname.toLowerCase() === "/signup";
-
-    if (name !== null && name !== undefined && name !== "") {
-      isRegisterPage && navigate("/signin");
-    }
-  };
-
   useEffect(() => {
+    const RedirectUser = () => {
+      let name = localStorage.getItem("first_name");
+      let isRegisterPage = window.location.pathname.toLowerCase() === "/signup";
+  
+      if (name !== null && name !== undefined && name !== "") {
+        isRegisterPage && navigate("/signin");
+      }
+    };
+  
     RedirectUser();
-  }, [RedirectUser]);
+  },[]);  // No dependencies, it will only run once on mount
+  
 
   return (
     <ThemeProvider theme={theme}>
