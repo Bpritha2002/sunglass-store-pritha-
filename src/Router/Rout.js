@@ -52,8 +52,8 @@ function AppRouter() {
           <Route path="/Edit/:id" element={<PrivateRoute><EditProduct /></PrivateRoute>} />
           <Route path="/profilee" element={<PrivateRoute><Profile /></PrivateRoute>} />
 
-          {/* Fallback Route */}
-          {/* <Route path="*" element={<Navigate to="/" />} /> */}
+          
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Footer />
       </Router>
