@@ -36,7 +36,7 @@ const theme = createTheme({
 });
 
 function Login() {
-  const {  } = useSelector((state) => state.contents);
+   useSelector((state) => state.contents);
   const {
     register,
     handleSubmit,

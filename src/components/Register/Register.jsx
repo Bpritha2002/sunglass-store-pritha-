@@ -30,7 +30,7 @@ const theme = createTheme({
 });
 
 function Registration() {
-  const { redirectLogin } = useSelector((state) => state.contents);
+   useSelector((state) => state.contents);
   const { register, handleSubmit, formState: { errors } } = useForm();
   const [profilePic, setProfilePic] = useState(null);
   const [imgName, setImgName] = useState("");
