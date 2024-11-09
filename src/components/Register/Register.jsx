@@ -68,7 +68,7 @@ function Registration() {
     };
   
     RedirectUser();
-  },[]);  // No dependencies, it will only run once on mount
+  }, [navigate]); // Include navigate as a dependency
   
 
   return (
