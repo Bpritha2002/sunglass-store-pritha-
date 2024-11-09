@@ -13,7 +13,7 @@ function ShowingProduct() {
   const [delete_id, setDelete_id] = useState("");
   const [isDelete, setIsDelete] = useState(false);
   const [page, setPage] = useState(1);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [setWindowWidth] = useState(window.innerWidth);
 
   // Handle window resize
   useEffect(() => {

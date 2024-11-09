@@ -68,7 +68,7 @@ function Registration() {
 
   useEffect(() => {
     RedirectUser();
-  }, [redirectLogin]);
+  }, [RedirectUser]);
 
   return (
     <ThemeProvider theme={theme}>

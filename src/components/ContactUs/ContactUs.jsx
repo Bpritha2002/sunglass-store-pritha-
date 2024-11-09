@@ -7,7 +7,7 @@ import {
   Typography,
   Paper,
   Box,
-  IconButton
+  
 } from '@mui/material';
 import { styled } from '@mui/system';
 import LocationOnIcon from '@mui/icons-material/LocationOn';

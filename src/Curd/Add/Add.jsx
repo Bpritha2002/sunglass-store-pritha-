@@ -9,7 +9,7 @@ import { product } from "../../Redux/cartSlice";
 import backgroundImage from '../../utils/pr3.jpg'; // Adjust the path as necessary
 
 function AddProduct() {
-  const { redirectHome } = useSelector((state) => state.CrudKey);
+  // const { redirectHome } = useSelector((state) => state.CrudKey);
   const { register, handleSubmit, formState: { errors } } = useForm();
   const navigate = useNavigate();
   const dispatch = useDispatch();

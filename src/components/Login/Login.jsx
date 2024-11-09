@@ -59,7 +59,7 @@ function Login() {
 
   useEffect(() => {
     RedirectUser();
-  }, [redirectHome]);
+  }, [RedirectUser]);
 
   return (
     <ThemeProvider theme={theme}>

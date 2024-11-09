@@ -15,7 +15,7 @@ const Home = () => {
     <Box className="home">
       {/* Static Header Image */}
       <Box className="hero-image-container">
-        <img src={require('../../utils/head1.jpg')} alt="Hero Image" className="hero-image" />
+        <img src={require('../../utils/head1.jpg')} alt="Hero" className="hero-image" />
         <Box className="hero-description">
           <h1>FEEL THE BEAT!</h1>
           <p>Your one-stop shop for the latest sunglasses trends.</p>
