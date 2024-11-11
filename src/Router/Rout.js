@@ -36,7 +36,7 @@ function AppRouter() {
         <Header />
         <Routes>
           {/* Public Routes */}
-          <Route path="/signup" element={<Registration />} />
+          <Route path="/signup" element={<Registration/>}/>
           <Route path="/signin" element={<Login />} />
 
           {/* Dynamic Category Route */}
